@@ -1,0 +1,10 @@
+$title:"Title of problem"
+$desc:"Description of problem"
+
+# file does not support comments, do not use them, they are in this file to explain the formatting
+
+{
+    "if":"text here in command to run", # checks if text before "in" is in the output of the command after "in"
+    "then":"command to run to fix it", # runs this command if "if" is true
+    "else":"command to run if the if is not true" # runs this command if the if is not true (for example an echo)
+}

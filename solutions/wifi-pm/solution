@@ -1,0 +1,8 @@
+$title:"Power Managment on wlan0"
+$desc:"Power management on wlan0 causes wifi to disconnect randomly"
+
+{
+    "if":"Power Managment:on in iwconfig",
+    "then": "sudo iwconfig wlan0 power off && sudo reboot",
+    "else":"echo Power Managment is not on."
+}
