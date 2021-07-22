@@ -1,8 +1,9 @@
 $title:"Power Managment on wlan0"
 $desc:"Power management on wlan0 causes wifi to disconnect randomly"
+$source: "R2Boyo25, https://stackoverflow.com/a/9625233/14639101"
 
 {
     "if":"Power Managment:on in iwconfig",
-    "then": "sudo iwconfig wlan0 power off && sudo reboot",
+    "then": "(crontab -l 2>/dev/null; echo \"@reboot sudo iwconfig wlan0 power off\") | crontab -",
     "else":"echo Power Managment is not on."
 }
