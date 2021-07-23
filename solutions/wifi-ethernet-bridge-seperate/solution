@@ -1,9 +1,9 @@
-$title: "Create wifi to ethernet bridge"
+$title: "Create wifi to ethernet bridge (Seperate Subnet)"
 $desc: "bridges wifi and ethernet allowing internet to be passed through ethernet to another machine"
 $source: "https://willhaley.com/blog/raspberry-pi-wifi-ethernet-bridge/"
 
 {
-    "if": "parprouted in apt list --installed",
+    "if": "dnsmasq in apt list --installed",
     "then": "echo Script has already been run",
-    "else": "sudo bash ./solutions/wifi-ethernet-bridge/bridge.sh"
+    "else": "sudo bash ./solutions/wifi-ethernet-bridge-seperate/bridge.sh"
 }
